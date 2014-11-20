@@ -13,7 +13,6 @@
 		890C0B181A1B4B9500672FA8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 890C0B161A1B4B9500672FA8 /* InfoPlist.strings */; };
 		890C0B1A1A1B4B9500672FA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 890C0B191A1B4B9500672FA8 /* main.m */; };
 		890C0B1E1A1B4B9500672FA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 890C0B1D1A1B4B9500672FA8 /* AppDelegate.m */; };
-		890C0B211A1B4B9500672FA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 890C0B1F1A1B4B9500672FA8 /* Main.storyboard */; };
 		890C0B241A1B4B9500672FA8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 890C0B231A1B4B9500672FA8 /* ViewController.m */; };
 		890C0B261A1B4B9500672FA8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 890C0B251A1B4B9500672FA8 /* Images.xcassets */; };
 		890C0B2D1A1B4B9500672FA8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890C0B2C1A1B4B9500672FA8 /* XCTest.framework */; };
@@ -21,6 +20,7 @@
 		890C0B2F1A1B4B9500672FA8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890C0B111A1B4B9500672FA8 /* UIKit.framework */; };
 		890C0B371A1B4B9500672FA8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 890C0B351A1B4B9500672FA8 /* InfoPlist.strings */; };
 		890C0B391A1B4B9500672FA8 /* ResearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 890C0B381A1B4B9500672FA8 /* ResearchTests.m */; };
+		891D8FD51A1DA48C00C87D77 /* Local.strings in Resources */ = {isa = PBXBuildFile; fileRef = 891D8FD71A1DA48C00C87D77 /* Local.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +44,6 @@
 		890C0B1B1A1B4B9500672FA8 /* Research-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Research-Prefix.pch"; sourceTree = "<group>"; };
 		890C0B1C1A1B4B9500672FA8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		890C0B1D1A1B4B9500672FA8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		890C0B201A1B4B9500672FA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		890C0B221A1B4B9500672FA8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		890C0B231A1B4B9500672FA8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		890C0B251A1B4B9500672FA8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -53,6 +52,11 @@
 		890C0B341A1B4B9500672FA8 /* ResearchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ResearchTests-Info.plist"; sourceTree = "<group>"; };
 		890C0B361A1B4B9500672FA8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		890C0B381A1B4B9500672FA8 /* ResearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResearchTests.m; sourceTree = "<group>"; };
+		891D8FD61A1DA48C00C87D77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Local.strings; sourceTree = "<group>"; };
+		891D8FD91A1DA4B600C87D77 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		891D8FDA1A1DA4B700C87D77 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Local.strings; sourceTree = "<group>"; };
+		891D8FDB1A1DA4B700C87D77 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		891D8FDF1A1DC3F800C87D77 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,11 +118,12 @@
 			children = (
 				890C0B1C1A1B4B9500672FA8 /* AppDelegate.h */,
 				890C0B1D1A1B4B9500672FA8 /* AppDelegate.m */,
-				890C0B1F1A1B4B9500672FA8 /* Main.storyboard */,
 				890C0B221A1B4B9500672FA8 /* ViewController.h */,
 				890C0B231A1B4B9500672FA8 /* ViewController.m */,
 				890C0B251A1B4B9500672FA8 /* Images.xcassets */,
 				890C0B141A1B4B9500672FA8 /* Supporting Files */,
+				891D8FD71A1DA48C00C87D77 /* Local.strings */,
+				891D8FDF1A1DC3F800C87D77 /* Macro.h */,
 			);
 			path = Research;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 			knownRegions = (
 				en,
 				Base,
+				vi,
 			);
 			mainGroup = 890C0B011A1B4B9500672FA8;
 			productRefGroup = 890C0B0B1A1B4B9500672FA8 /* Products */;
@@ -228,9 +234,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				891D8FD51A1DA48C00C87D77 /* Local.strings in Resources */,
 				890C0B261A1B4B9500672FA8 /* Images.xcassets in Resources */,
 				890C0B181A1B4B9500672FA8 /* InfoPlist.strings in Resources */,
-				890C0B211A1B4B9500672FA8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,24 +284,27 @@
 			isa = PBXVariantGroup;
 			children = (
 				890C0B171A1B4B9500672FA8 /* en */,
+				891D8FD91A1DA4B600C87D77 /* vi */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		890C0B1F1A1B4B9500672FA8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				890C0B201A1B4B9500672FA8 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		890C0B351A1B4B9500672FA8 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				890C0B361A1B4B9500672FA8 /* en */,
+				891D8FDB1A1DA4B700C87D77 /* vi */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		891D8FD71A1DA48C00C87D77 /* Local.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				891D8FD61A1DA48C00C87D77 /* en */,
+				891D8FDA1A1DA4B700C87D77 /* vi */,
+			);
+			name = Local.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -456,6 +465,7 @@
 				890C0B3E1A1B4B9500672FA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		890C0B3F1A1B4B9500672FA8 /* Build configuration list for PBXNativeTarget "ResearchTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +474,7 @@
 				890C0B411A1B4B9500672FA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

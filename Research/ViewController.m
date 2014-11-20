@@ -14,11 +14,11 @@
 {
     UIView *mainView;
     UIView *contentView;
+    UILabel *label;
 }
 @end
 
 @implementation ViewController
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -35,12 +35,19 @@
     contentView.backgroundColor = [UIColor darkGrayColor];
     [mainView addSubview:contentView];
     
+    label = [[UILabel alloc] init];
+    label.text = LOCALIZABLE(@"title", @"Local");
+    [mainView addSubview:label];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     mainView.frame = CGRectMake(0, self.view.frame.size.height - kHeight, self.view.frame.size.width, self.view.frame.size.height + kHeight);
     contentView.frame = CGRectMake(0, kHeight, self.view.frame.size.width, self.view.frame.size.height);
+    
+    label.frame = CGRectMake(10, 10, 250, 20);
+  
 }
 
 - (void)panGesture:(UIPanGestureRecognizer*)gesture

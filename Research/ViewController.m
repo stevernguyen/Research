@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TabView.h"
 
 #define kHeight 50
 
@@ -15,6 +16,7 @@
     UIView *mainView;
     UIView *contentView;
     UILabel *label;
+    TabView *tabview;
 }
 @end
 
@@ -39,6 +41,9 @@
     label.text = LOCALIZABLE(@"title", @"Local");
     [mainView addSubview:label];
     
+    tabview = [[[NSBundle mainBundle] loadNibNamed:@"TabView" owner:self options:nil] lastObject];
+    tabview.frame = CGRectMake(0, 200, 320, 50);
+    [self.view addSubview:tabview];
 }
 
 - (void)viewDidAppear:(BOOL)animated

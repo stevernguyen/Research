@@ -21,6 +21,11 @@
 		890C0B371A1B4B9500672FA8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 890C0B351A1B4B9500672FA8 /* InfoPlist.strings */; };
 		890C0B391A1B4B9500672FA8 /* ResearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 890C0B381A1B4B9500672FA8 /* ResearchTests.m */; };
 		891D8FD51A1DA48C00C87D77 /* Local.strings in Resources */ = {isa = PBXBuildFile; fileRef = 891D8FD71A1DA48C00C87D77 /* Local.strings */; };
+		89274CC11A1ED8E800773616 /* ico_shaptool_1_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 89274CBF1A1ED8E800773616 /* ico_shaptool_1_active.png */; };
+		89274CC21A1ED8E800773616 /* ico_shaptool_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 89274CC01A1ED8E800773616 /* ico_shaptool_1.png */; };
+		89274CC51A1EDA1900773616 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89274CC31A1EDA1900773616 /* Main.storyboard */; };
+		89384ECF1A1ECDC000F42500 /* TabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89384ECE1A1ECDC000F42500 /* TabView.m */; };
+		89384ED11A1ECDD300F42500 /* TabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89384ED01A1ECDD300F42500 /* TabView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,12 @@
 		891D8FDA1A1DA4B700C87D77 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Local.strings; sourceTree = "<group>"; };
 		891D8FDB1A1DA4B700C87D77 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		891D8FDF1A1DC3F800C87D77 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		89274CBF1A1ED8E800773616 /* ico_shaptool_1_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_shaptool_1_active.png; sourceTree = "<group>"; };
+		89274CC01A1ED8E800773616 /* ico_shaptool_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_shaptool_1.png; sourceTree = "<group>"; };
+		89274CC41A1EDA1900773616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		89384ECD1A1ECDC000F42500 /* TabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabView.h; sourceTree = "<group>"; };
+		89384ECE1A1ECDC000F42500 /* TabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabView.m; sourceTree = "<group>"; };
+		89384ED01A1ECDD300F42500 /* TabView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +127,9 @@
 		890C0B131A1B4B9500672FA8 /* Research */ = {
 			isa = PBXGroup;
 			children = (
+				89274CC31A1EDA1900773616 /* Main.storyboard */,
+				89274CBF1A1ED8E800773616 /* ico_shaptool_1_active.png */,
+				89274CC01A1ED8E800773616 /* ico_shaptool_1.png */,
 				890C0B1C1A1B4B9500672FA8 /* AppDelegate.h */,
 				890C0B1D1A1B4B9500672FA8 /* AppDelegate.m */,
 				890C0B221A1B4B9500672FA8 /* ViewController.h */,
@@ -124,6 +138,9 @@
 				890C0B141A1B4B9500672FA8 /* Supporting Files */,
 				891D8FD71A1DA48C00C87D77 /* Local.strings */,
 				891D8FDF1A1DC3F800C87D77 /* Macro.h */,
+				89384ECD1A1ECDC000F42500 /* TabView.h */,
+				89384ECE1A1ECDC000F42500 /* TabView.m */,
+				89384ED01A1ECDD300F42500 /* TabView.xib */,
 			);
 			path = Research;
 			sourceTree = "<group>";
@@ -234,9 +251,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89274CC51A1EDA1900773616 /* Main.storyboard in Resources */,
 				891D8FD51A1DA48C00C87D77 /* Local.strings in Resources */,
 				890C0B261A1B4B9500672FA8 /* Images.xcassets in Resources */,
+				89384ED11A1ECDD300F42500 /* TabView.xib in Resources */,
+				89274CC21A1ED8E800773616 /* ico_shaptool_1.png in Resources */,
 				890C0B181A1B4B9500672FA8 /* InfoPlist.strings in Resources */,
+				89274CC11A1ED8E800773616 /* ico_shaptool_1_active.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +278,7 @@
 			files = (
 				890C0B241A1B4B9500672FA8 /* ViewController.m in Sources */,
 				890C0B1E1A1B4B9500672FA8 /* AppDelegate.m in Sources */,
+				89384ECF1A1ECDC000F42500 /* TabView.m in Sources */,
 				890C0B1A1A1B4B9500672FA8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +327,14 @@
 				891D8FDA1A1DA4B700C87D77 /* vi */,
 			);
 			name = Local.strings;
+			sourceTree = "<group>";
+		};
+		89274CC31A1EDA1900773616 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89274CC41A1EDA1900773616 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

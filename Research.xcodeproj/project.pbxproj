@@ -21,6 +21,7 @@
 		890C0B371A1B4B9500672FA8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 890C0B351A1B4B9500672FA8 /* InfoPlist.strings */; };
 		890C0B391A1B4B9500672FA8 /* ResearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 890C0B381A1B4B9500672FA8 /* ResearchTests.m */; };
 		891D8FD51A1DA48C00C87D77 /* Local.strings in Resources */ = {isa = PBXBuildFile; fileRef = 891D8FD71A1DA48C00C87D77 /* Local.strings */; };
+		892505231A202ACB004C211C /* UIViewController+nibSubviews.m in Sources */ = {isa = PBXBuildFile; fileRef = 892505221A202ACB004C211C /* UIViewController+nibSubviews.m */; };
 		89274CC11A1ED8E800773616 /* ico_shaptool_1_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 89274CBF1A1ED8E800773616 /* ico_shaptool_1_active.png */; };
 		89274CC21A1ED8E800773616 /* ico_shaptool_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 89274CC01A1ED8E800773616 /* ico_shaptool_1.png */; };
 		89274CC51A1EDA1900773616 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89274CC31A1EDA1900773616 /* Main.storyboard */; };
@@ -62,6 +63,8 @@
 		891D8FDA1A1DA4B700C87D77 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Local.strings; sourceTree = "<group>"; };
 		891D8FDB1A1DA4B700C87D77 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		891D8FDF1A1DC3F800C87D77 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		892505211A202ACB004C211C /* UIViewController+nibSubviews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+nibSubviews.h"; sourceTree = "<group>"; };
+		892505221A202ACB004C211C /* UIViewController+nibSubviews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+nibSubviews.m"; sourceTree = "<group>"; };
 		89274CBF1A1ED8E800773616 /* ico_shaptool_1_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_shaptool_1_active.png; sourceTree = "<group>"; };
 		89274CC01A1ED8E800773616 /* ico_shaptool_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_shaptool_1.png; sourceTree = "<group>"; };
 		89274CC41A1EDA1900773616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -141,6 +144,8 @@
 				89384ECD1A1ECDC000F42500 /* TabView.h */,
 				89384ECE1A1ECDC000F42500 /* TabView.m */,
 				89384ED01A1ECDD300F42500 /* TabView.xib */,
+				892505211A202ACB004C211C /* UIViewController+nibSubviews.h */,
+				892505221A202ACB004C211C /* UIViewController+nibSubviews.m */,
 			);
 			path = Research;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 				890C0B241A1B4B9500672FA8 /* ViewController.m in Sources */,
 				890C0B1E1A1B4B9500672FA8 /* AppDelegate.m in Sources */,
 				89384ECF1A1ECDC000F42500 /* TabView.m in Sources */,
+				892505231A202ACB004C211C /* UIViewController+nibSubviews.m in Sources */,
 				890C0B1A1A1B4B9500672FA8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "TabView.h"
+#import "UIViewController+nibSubviews.h"
 
 #define kHeight 50
 
@@ -18,6 +19,8 @@
     UILabel *label;
     TabView *tabview;
 }
+@property (weak, nonatomic) IBOutlet TabView *tab;
+
 @end
 
 @implementation ViewController
@@ -25,25 +28,31 @@
 {
     [super viewDidLoad];
     
+    self.tab = (TabView*)[self loadNib:@"TabView" inPlaceholder:self.tab];
+    
     mainView = [[UIView alloc] initWithFrame:CGRectZero];
-    mainView.backgroundColor = [UIColor brownColor];
-    mainView.userInteractionEnabled = YES;
-    [self.view addSubview:mainView];
+//    mainView.backgroundColor = [UIColor brownColor];
+//    mainView.userInteractionEnabled = YES;
+//    [self.view addSubview:mainView];
+//    
+//    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGesture:)];
+//    [mainView addGestureRecognizer:pan];
+//    
+//    contentView = [[UIView alloc] initWithFrame:CGRectZero];
+//    contentView.backgroundColor = [UIColor darkGrayColor];
+//    [mainView addSubview:contentView];
+//    
+//    label = [[UILabel alloc] init];
+//    label.text = LOCALIZABLE(@"title", @"Local");
+//    [mainView addSubview:label];
+//    
+//    self.tab = [[[NSBundle mainBundle] loadNibNamed:@"TabView" owner:self options:nil] lastObject];
+//    [self.view bringSubviewToFront:self.tab];
+//    [self.view addSubview:self.tab];
     
-    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGesture:)];
-    [mainView addGestureRecognizer:pan];
-    
-    contentView = [[UIView alloc] initWithFrame:CGRectZero];
-    contentView.backgroundColor = [UIColor darkGrayColor];
-    [mainView addSubview:contentView];
-    
-    label = [[UILabel alloc] init];
-    label.text = LOCALIZABLE(@"title", @"Local");
-    [mainView addSubview:label];
-    
-    tabview = [[[NSBundle mainBundle] loadNibNamed:@"TabView" owner:self options:nil] lastObject];
-    tabview.frame = CGRectMake(0, 200, 320, 50);
-    [self.view addSubview:tabview];
+//    tabview = [[[NSBundle mainBundle] loadNibNamed:@"TabView" owner:self options:nil] lastObject];
+//    tabview.frame = CGRectMake(0, 200, 320, 50);
+//    [self.view addSubview:tabview];
 }
 
 - (void)viewDidAppear:(BOOL)animated

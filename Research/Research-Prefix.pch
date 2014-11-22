@@ -17,4 +17,5 @@
 #endif
 
 
+#define NEW_VIEW(className)    nil
 

@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import "TabView.h"
 #import "UIViewController+nibSubviews.h"
+#import <CoreTelephony/CoreTelephonyDefines.h>
+#import <CoreTelephony/CTCallCenter.h>
+#import <CoreTelephony/CTCall.h>
 
 #define kHeight 50
 
@@ -53,6 +56,35 @@
 //    tabview = [[[NSBundle mainBundle] loadNibNamed:@"TabView" owner:self options:nil] lastObject];
 //    tabview.frame = CGRectMake(0, 200, 320, 50);
 //    [self.view addSubview:tabview];
+    
+    CTCallCenter * _callCenter = [[CTCallCenter alloc] init];
+    _callCenter.callEventHandler = ^(CTCall* call)
+    {
+        
+        if ([call.callState isEqualToString:CTCallStateDisconnected])
+        {
+            NSLog(@"Call has been disconnected");
+        }
+        else if([call.callState isEqualToString:CTCallStateDialing])
+        {
+            NSLog(@"Call start");
+        }
+        else if ([call.callState isEqualToString:CTCallStateConnected])
+        {
+            
+            NSLog(@"Call has just been connected");
+        }
+        else if([call.callState isEqualToString:CTCallStateIncoming])
+        {
+            NSLog(@"Call is incoming");
+            // You have to initiate/post your local notification through NSNotification center like this
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"stopAVPlayer" object:nil];
+        } else
+        {
+            NSLog(@"None of the conditions");
+        } 
+    };
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated

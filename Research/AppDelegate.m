@@ -7,11 +7,24 @@
 //
 
 #import "AppDelegate.h"
+#import <CoreTelephony/CoreTelephonyDefines.h>
+#import <CoreTelephony/CTCallCenter.h>
+#import <CoreTelephony/CTCall.h>
+
+void (^block)(CTCall*) = ^(CTCall* call) { NSLog(@"%@", call.callState); };
+
+@interface AppDelegate ()
+
+@property (nonatomic, strong)  CTCallCenter *callCenter1;
+
+@end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.callCenter1 = [[CTCallCenter alloc] init];
+    self.callCenter1.callEventHandler = block;
     // Override point for customization after application launch.
     return YES;
 }

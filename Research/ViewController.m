@@ -12,17 +12,26 @@
 #import <CoreTelephony/CoreTelephonyDefines.h>
 #import <CoreTelephony/CTCallCenter.h>
 #import <CoreTelephony/CTCall.h>
+#import "MidPlayView.h"
 
 #define kHeight 50
 
 @interface ViewController ()
 {
-    UIView *mainView;
+   // UIView *mainView;
     UIView *contentView;
     UILabel *label;
     TabView *tabview;
+    
+    CGFloat translateX;
+    BOOL flag;
 }
 @property (weak, nonatomic) IBOutlet TabView *tab;
+- (IBAction)buttonClick:(id)sender;
+
+@property (strong, nonatomic)  MidPlayView *midView;
+@property (strong, nonatomic)  UIView *mainView;
+@property (strong, nonatomic)  UIView *coverView;
 
 @end
 
@@ -31,9 +40,29 @@
 {
     [super viewDidLoad];
     
-    self.tab = (TabView*)[self loadNib:@"TabView" inPlaceholder:self.tab];
+    CGRect fMain = self.view.bounds;
+    fMain.origin.y = fMain.size.height;
+    self.mainView = [[UIView alloc] initWithFrame:fMain];
+    self.mainView.backgroundColor = [UIColor brownColor];
     
-    mainView = [[UIView alloc] initWithFrame:CGRectZero];
+    self.coverView = [[UIView alloc] initWithFrame:CGRectZero];
+    
+    float w = 70;
+    float h = 70;
+    float x = (self.view.frame.size.width - w) / 2;
+    float y = self.view.frame.size.height - h;
+    CGRect f = CGRectMake(x, y, w, h);
+    self.midView = [[MidPlayView alloc] initWithFrame:f coverView:self.coverView mainPlayView:self.mainView];
+    self.midView.backgroundColor = [UIColor darkGrayColor];
+    
+    [self.view addSubview:self.midView];
+    [self.view addSubview:self.mainView];
+    [self.view addSubview:self.coverView];
+    
+//    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGesture:)];
+//    [self.midView addGestureRecognizer:pan];
+
+    
 //    mainView.backgroundColor = [UIColor brownColor];
 //    mainView.userInteractionEnabled = YES;
 //    [self.view addSubview:mainView];
@@ -57,42 +86,15 @@
 //    tabview.frame = CGRectMake(0, 200, 320, 50);
 //    [self.view addSubview:tabview];
     
-    CTCallCenter * _callCenter = [[CTCallCenter alloc] init];
-    _callCenter.callEventHandler = ^(CTCall* call)
-    {
-        
-        if ([call.callState isEqualToString:CTCallStateDisconnected])
-        {
-            NSLog(@"Call has been disconnected");
-        }
-        else if([call.callState isEqualToString:CTCallStateDialing])
-        {
-            NSLog(@"Call start");
-        }
-        else if ([call.callState isEqualToString:CTCallStateConnected])
-        {
-            
-            NSLog(@"Call has just been connected");
-        }
-        else if([call.callState isEqualToString:CTCallStateIncoming])
-        {
-            NSLog(@"Call is incoming");
-            // You have to initiate/post your local notification through NSNotification center like this
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"stopAVPlayer" object:nil];
-        } else
-        {
-            NSLog(@"None of the conditions");
-        } 
-    };
     
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    mainView.frame = CGRectMake(0, self.view.frame.size.height - kHeight, self.view.frame.size.width, self.view.frame.size.height + kHeight);
-    contentView.frame = CGRectMake(0, kHeight, self.view.frame.size.width, self.view.frame.size.height);
-    
-    label.frame = CGRectMake(10, 10, 250, 20);
+//    mainView.frame = CGRectMake(0, self.view.frame.size.height - kHeight, self.view.frame.size.width, self.view.frame.size.height + kHeight);
+//    contentView.frame = CGRectMake(0, kHeight, self.view.frame.size.width, self.view.frame.size.height);
+//    
+//    label.frame = CGRectMake(10, 10, 250, 20);
   
 }
 
@@ -100,23 +102,40 @@
 {
     if (gesture.state == UIGestureRecognizerStateBegan)
     {
+        flag = NO;
+        translateX = 0.f;
         gesture.view.alpha = 0.8f;
     } else if (gesture.state == UIGestureRecognizerStateChanged)
     {
         CGPoint translate = [gesture translationInView:gesture.view];
-        CGRect f = gesture.view.frame;
-        f.origin.x = 0;
-        f.origin.y = f.origin.y + translate.y;
+        translateX += translate.y;
         
-        if (f.origin.y < -kHeight) {
-            f.origin.y = -kHeight;
+        CGRect fMain = self.mainView.frame;
+        fMain.origin.x = 0;
+        fMain.origin.y += translate.y;
+        self.mainView.frame = fMain;
+        
+        if (fMain.origin.y <= self.view.frame.size.height - kHeight) {
+            flag = YES;
         }
         
-        if (f.origin.y > self.view.frame.size.height - kHeight) {
-            f.origin.y = self.view.frame.size.height - kHeight;
+         NSLog(@"%f",translateX);
+        if (flag) {
+            CGRect f = gesture.view.frame;
+            f.origin.x = (self.view.frame.size.width - gesture.view.frame.size.width) / 2;
+            f.origin.y = f.origin.y + translate.y;
+            
+            if (f.origin.y < -kHeight) {
+                f.origin.y = -kHeight;
+            }
+            
+            if (f.origin.y > self.view.frame.size.height - kHeight) {
+                f.origin.y = self.view.frame.size.height - kHeight;
+            }
+            
+            gesture.view.frame = f;
         }
         
-        gesture.view.frame = f;
         [gesture setTranslation:CGPointZero inView:gesture.view];
         
     } else if (gesture.state == UIGestureRecognizerStateEnded ||
@@ -124,16 +143,22 @@
                gesture.state == UIGestureRecognizerStateCancelled)
     {
         CGRect f = gesture.view.frame;
+        CGRect fMain = self.mainView.frame;
+        
         if (f.origin.y < self.view.frame.size.height / 2) {
-            f.origin.y = -kHeight;
+            f.origin.y = 0;//-kHeight;
+            fMain.origin.y = kHeight;
         }
         
         if (f.origin.y >= self.view.frame.size.height / 2) {
             f.origin.y = self.view.frame.size.height - kHeight;
+            fMain.origin.x = 0;
+            fMain.origin.y = self.view.frame.size.height;
         }
         
         [UIView animateWithDuration:0.3 animations:^{
             gesture.view.frame = f;
+            self.mainView.frame = fMain;
         } completion:^(BOOL finished) {
             gesture.view.alpha = 1.f;
         }];
@@ -141,4 +166,7 @@
 }
 
 
+- (IBAction)buttonClick:(id)sender {
+    
+}
 @end

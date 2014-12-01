@@ -33,6 +33,7 @@
 		893294311A25C8FC00B0E488 /* MidPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 893294301A25C8FC00B0E488 /* MidPlayView.m */; };
 		89384ECF1A1ECDC000F42500 /* TabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89384ECE1A1ECDC000F42500 /* TabView.m */; };
 		89384ED11A1ECDD300F42500 /* TabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89384ED01A1ECDD300F42500 /* TabView.xib */; };
+		89AD636E1A2C65AB00B2FA97 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89AD636D1A2C65AB00B2FA97 /* SettingViewController.m */; };
 		89BF820F1A26DE7C0040CD0B /* SNTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BF820E1A26DE7C0040CD0B /* SNTableView.m */; };
 		89E6D6781A2345BC00160CAB /* UIView+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E6D6771A2345BC00160CAB /* UIView+Animations.m */; };
 		89E6D67A1A23463F00160CAB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89E6D6791A23463F00160CAB /* CoreTelephony.framework */; };
@@ -91,6 +92,8 @@
 		89384ECD1A1ECDC000F42500 /* TabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabView.h; sourceTree = "<group>"; };
 		89384ECE1A1ECDC000F42500 /* TabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabView.m; sourceTree = "<group>"; };
 		89384ED01A1ECDD300F42500 /* TabView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabView.xib; sourceTree = "<group>"; };
+		89AD636C1A2C65AB00B2FA97 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		89AD636D1A2C65AB00B2FA97 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		89BF820D1A26DE7C0040CD0B /* SNTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNTableView.h; sourceTree = "<group>"; };
 		89BF820E1A26DE7C0040CD0B /* SNTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNTableView.m; sourceTree = "<group>"; };
 		89E6D6761A2345BC00160CAB /* UIView+Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Animations.h"; sourceTree = "<group>"; };
@@ -203,6 +206,8 @@
 				89E6D6771A2345BC00160CAB /* UIView+Animations.m */,
 				89BF820D1A26DE7C0040CD0B /* SNTableView.h */,
 				89BF820E1A26DE7C0040CD0B /* SNTableView.m */,
+				89AD636C1A2C65AB00B2FA97 /* SettingViewController.h */,
+				89AD636D1A2C65AB00B2FA97 /* SettingViewController.m */,
 			);
 			path = Research;
 			sourceTree = "<group>";
@@ -375,6 +380,7 @@
 			files = (
 				892505321A203021004C211C /* VideoTableViewCell.m in Sources */,
 				8925052F1A203018004C211C /* SongTableViewCell.m in Sources */,
+				89AD636E1A2C65AB00B2FA97 /* SettingViewController.m in Sources */,
 				890C0B241A1B4B9500672FA8 /* ViewController.m in Sources */,
 				89E6D6781A2345BC00160CAB /* UIView+Animations.m in Sources */,
 				89BF820F1A26DE7C0040CD0B /* SNTableView.m in Sources */,

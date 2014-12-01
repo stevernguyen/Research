@@ -13,6 +13,7 @@
 #import <CoreTelephony/CTCallCenter.h>
 #import <CoreTelephony/CTCall.h>
 #import "MidPlayView.h"
+#import "SettingViewController.h"
 
 #define kHeight 50
 
@@ -167,6 +168,9 @@
 
 
 - (IBAction)buttonClick:(id)sender {
+    SettingViewController *st = [[SettingViewController alloc] init];
+    [self.navigationController pushViewController:st animated:YES];
     
+    //[self presentViewController:st animated:YES completion:NULL];
 }
 @end

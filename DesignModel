@@ -13,4 +13,10 @@
 5. Video Table
 (id, name, artist, composer, lyric, titleURL, cover, downloadState, webURL, quanlityDownload)
 
-- Chạy v1.6.2 download music, video tất cả các quanlity -> viết function 
+- Chạy v1.6.2 download music, video tất cả các quanlity, add playlist online, offline của một vài music
+- Define class CSNOldManager -> fetch data từng bảng -> result dictionary [define key của dictionary này]
+- Tạo model trên project. Viết CSServiceManager
+- Kiểm tra xem có sqlite cũ không? Nếu có thì bắt đầu transfer data sang coredata:
+	+ Check xem fileName download đang để như nào -> replace fileName download theo format: songID_songTitleURL_quanlity -> copty toàn bộ sang 1 folder download
+	+ Convert data từ CSDL old -> CSDL new
+	

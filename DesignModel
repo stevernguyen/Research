@@ -1,0 +1,16 @@
+1. Song Table
+(id, name, artist, composer, lyric, titleURL, cover, isIpod, downloadState, artistID, albumID, playlistID, webURL, quanlityDownload)
+
+2. Album Table
+(id, name, artistName, cover)
+
+3. Artist Table
+(id, name, cover)
+
+4. Playlist Table
+(id, name, listSong, totalSong, cover)
+
+5. Video Table
+(id, name, artist, composer, lyric, titleURL, cover, downloadState, webURL, quanlityDownload)
+
+- Chạy v1.6.2 download music, video tất cả các quanlity -> viết function 

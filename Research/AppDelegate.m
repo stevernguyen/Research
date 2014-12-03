@@ -22,7 +22,7 @@ void (^block)(CTCall*) = ^(CTCall* call) { NSLog(@"%@", call.callState); };
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+{  
     self.callCenter1 = [[CTCallCenter alloc] init];
     self.callCenter1.callEventHandler = block;
     // Override point for customization after application launch.
